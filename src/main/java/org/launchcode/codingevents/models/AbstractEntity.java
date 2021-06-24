@@ -2,13 +2,8 @@ package org.launchcode.codingevents.models;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
 import java.util.Objects;
 
-/**
- * Created by Chris Bay
- */
-@MappedSuperclass
 public abstract class AbstractEntity {
 
     @Id
@@ -26,10 +21,12 @@ public abstract class AbstractEntity {
         AbstractEntity entity = (AbstractEntity) o;
         return id == entity.id;
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(id);
     }
 
 }
+
+
+
